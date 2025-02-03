@@ -29,7 +29,7 @@ function App() {
       <Header onAddExpense={addExpense} />
       <div className="flex flex-row justify-around">
         <div className="w-1/2">
-          <Add />
+          <Add onAddExpense={addExpense} />
         </div>
         <div className="w-1/2">
           <History expenses={expenses} />

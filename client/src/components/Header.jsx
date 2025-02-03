@@ -9,7 +9,7 @@ const Header = ({ onAddExpense }) => {
     name: "test",
     amount: 100,
     date: new Date(),
-    tag: "test",
+    tag: ["test", "test2"],
     section: "test",
     paymentMethod: "cash",
   };

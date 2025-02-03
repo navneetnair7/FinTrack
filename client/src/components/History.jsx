@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import HistoryNav from "./HostoryNav";
 
 const History = ({ expenses }) => {
   return (
     <div className="border border-black">
-      <div>History</div>
+      <HistoryNav />
       <ul role="list" className="divide-y divide-gray-100">
         {expenses.map((item) => (
           // alternate background colour
@@ -33,17 +34,17 @@ const History = ({ expenses }) => {
                 ))}
               <div className="min-w-0 flex-auto">
                 <p className="text-sm/6 font-semibold text-gray-900">
-                  Leslie Alexander
+                  {item.name}
                 </p>
                 <p className="mt-1 truncate text-xs/5 text-gray-500">
-                  leslie.alexander@example.com
+                  {item.tag.join(", ")}
                 </p>
               </div>
             </div>
             <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-              <p className="text-sm/6 text-gray-900">Co-Founder / CEO</p>
+              <p className="text-sm/6 text-gray-900">Rs. {item.amount}</p>
               <p className="mt-1 text-xs/5 text-gray-500">
-                Last seen <time dateTime="2023-01-23T13:23Z">3h ago</time>
+                <time dateTime="2023-01-23T13:23Z">{item.date}</time>
               </p>
             </div>
           </li>

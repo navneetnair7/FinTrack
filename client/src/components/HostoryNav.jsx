@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function SubsectionNav() {
   return (
-    <nav className="mb-4 border-b pb-2">
+    <nav className="mb-4">
       <NavLink
         to="tab1"
         className={({ isActive }) =>

@@ -3,12 +3,12 @@ import HistoryNav from "./HostoryNav";
 
 const History = ({ expenses }) => {
   return (
-    <div className="border border-black">
+    <div className="">
       <HistoryNav />
       <ul role="list" className="divide-y divide-gray-100">
         {expenses.map((item) => (
           // alternate background colour
-          <li className="flex justify-between gap-x-6 py-5 px-4 bg-gray-50">
+          <li className="flex justify-between gap-x-6 py-5 px-4 bg-gray-50 m-2 rounded-xl shadow-md hover:shadow-2xl">
             <div className="flex min-w-0 gap-x-4">
               {(item.paymentMethod === "cash" && (
                 <img
